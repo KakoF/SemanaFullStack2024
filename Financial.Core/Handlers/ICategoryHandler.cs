@@ -4,7 +4,7 @@ using Financial.Core.Responses;
 
 namespace Financial.Core.Handlers
 {
-    public interface ICategoryHandlers
+    public interface ICategoryHandler
     {
         Task<Response<Category>> CreateAsync(CreateCategoryRequest request);
         Task<Response<Category>> UpdateAsync(UpdateCategoryRequest request);
