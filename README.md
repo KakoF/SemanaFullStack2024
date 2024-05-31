@@ -45,3 +45,15 @@ dotnet ef migrations add v1
 
 Executar migrations no banco
 dotnet ef database update
+
+
+
+
+
+
+Pacotes para aplicacao WEB
+dotnet add package MudBlazor
+https://mudblazor.com/getting-started/installation#manual-install-add-font-and-style-references
+https://fonts.google.com/selection?query=Rale
+
+dotnet add package Microsoft.Extensions.Http

@@ -1,0 +1,22 @@
+﻿@inherits LayoutComponentBase
+
+<MudThemeProvider IsDarkMode="true" />
+<MudDialogProvider />
+<MudSnackbarProvider />
+<!--
+	Modal
+	<MudDialogProvider />
+	SnackBar
+	<MudSnackbarProvider />
+-->
+
+<MudLayout>
+	<MudAppBar>
+		Financial
+	</MudAppBar>
+	<MudMainContent>
+		<MudContainer>
+			@Body
+		</MudContainer>
+	</MudMainContent>
+</MudLayout>

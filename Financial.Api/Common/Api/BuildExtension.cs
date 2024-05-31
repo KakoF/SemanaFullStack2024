@@ -12,8 +12,8 @@ namespace Financial.Api.Common.Api
         public static void AddConfiguration(this WebApplicationBuilder builder)
         {
             ApiConfiguration.ConnectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? string.Empty;
-            Configuration.BackendUrl = builder.Configuration.GetValue<string>("BackendUrl") ?? string.Empty;
-            Configuration.FrontendUrl = builder.Configuration.GetValue<string>("FrontendUrl") ?? string.Empty;
+            Configuration.BackendUrl = builder.Configuration.GetValue<string>("Clients:BackendUrl") ?? string.Empty;
+            Configuration.FrontendUrl = builder.Configuration.GetValue<string>("Clients:FrontendUrl") ?? string.Empty;
         }
 
         public static void AddDocumentation(this WebApplicationBuilder builder)
@@ -58,11 +58,11 @@ namespace Financial.Api.Common.Api
         {
             builder
                 .Services
-                .AddTransient<ICategoryHandler, CategoryHandler>();
+                .AddScoped<ICategoryHandler, CategoryHandler>();
 
             builder
                 .Services
-                .AddTransient<ITransactionHandler, TransactionHandler>();
+                .AddScoped<ITransactionHandler, TransactionHandler>();
         }
     }
 }
